@@ -1,0 +1,294 @@
+
+html {
+   scroll-behavior: smooth;
+}
+
+#logo {
+   height: 30px;
+   filter: invert(1);
+}
+
+body {
+  background-image: url('./images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+   background-color: rgba(255, 255, 255, 0);
+   height: 100vh;
+}
+
+
+.outputs {
+  margin: 0;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.222);
+}
+
+#brand {
+   display: flex;
+   align-items: center;
+}
+
+#title {
+   justify-items: center;
+   display: flex;
+   flex-direction: column;
+   width: fit-content;
+   margin-left: 10px;
+
+}
+
+#title>p {
+  color: white;
+   font-size: 1vmax;
+   margin: 0px !important;
+   padding: 0px !important;
+}
+
+#title>h5 {
+color: white;
+   margin: 0px !important;
+   padding: 0px !important;
+}
+body {
+  font-family: "Dosis", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  color: rgb(0, 0, 0); 
+}
+main {
+   width: 100%;
+   height:100%;
+  font-family: "Dosis", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+#topbar, #topbar * {
+  box-sizing: border-box;
+ }
+#topbar {
+
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+    padding: 10px 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+   }
+   
+
+
+#brand {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+#title {
+  margin: 0;
+}
+
+#nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#nav li {
+  align-self: center;
+  color: white;
+  margin-right: 20px;
+}
+
+#nav a {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.intro {
+  text-align: center;
+  padding: 20px;
+}
+.intro > h2 {
+  font-size: 2rem;
+}
+.intro > p {
+  font-size: 1.6rem;
+}
+.inputcontainer {
+  border-radius: 10px;
+  display: flex;
+  float: left;
+  width: 90%;
+  justify-content: center;
+  padding: 20px;
+  
+}
+
+.user-input {
+  border-radius: 10px;
+  max-width: 40%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-image: linear-gradient(skyblue,yellow) 30;
+  border-width: 4px;
+  border-style: solid;
+  background-color: #ffffff94;
+}
+
+.user-input h2 {
+  margin-top: 0;
+}
+
+.secondaryoutput {
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-top: 20px;
+  text-align: center;
+  display: none;
+  position: relative;
+  top: -60px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  width: 40%;
+  border-image: linear-gradient(skyblue,yellow) 30;
+  border-width: 4px;
+  border-style: solid;
+  background-color: #ffffff90;
+}
+
+.mainoutput {
+  background-image: linear-gradient(skyblue, yellow);
+  display: none;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: suspense 1s ease-in-out;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 45%;
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+  top: -10px;
+
+}
+
+@media screen and (max-width: 768px) {
+  .inputcontainer,
+  .secondaryoutput {
+    width: 100%;
+  }
+
+  .mainoutput {
+    width: 100%;
+  }
+}
+h1 {
+  font-size: 1.6rem;
+}
+.spinner {
+  animation: pop 1s linear 1;
+}
+  
+
+@keyframes pop {
+  
+  50% {
+    transform: scale(1.5);
+  }
+  50%{
+    transform: rotateX(1080deg);
+  }
+}
+.show {
+  display: flex;
+}
+.halfwidth {
+  width: 50%;
+}
+#predicted-kd{
+  border-bottom: none;
+}
+/* Style for the form container */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+  margin: 20px auto; /* Center the form and add some margin */
+}
+
+/* Style for the heading */
+#enter {
+  font-size: 24px; /* Adjust font size */
+  color: #333; /* Adjust color */
+  margin-bottom: 20px; /* Add some space below the heading */
+}
+
+/* Style for the input field */
+#username {
+  width: 100%; /* Make the input field take the full width of the form */
+  padding: 10px; /* Add some padding */
+  margin-bottom: 20px; /* Add some space below the input field */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Round the corners */
+  font-size: 16px; /* Adjust font size */
+}
+
+/* Style for the submit button */
+.btn {
+  background-color: #fff700; /* Change the background color */
+  color: rgb(0, 0, 0); /* Change the text color */
+  padding: 10px 20px; /* Add some padding */
+  border: none; /* Remove the default border */
+  border-radius: 5px; /* Round the corners */
+  cursor: pointer; /* Change the cursor to a pointer when hovering */
+  font-size: 16px; /* Adjust font size */
+  transition: background-color 0.3s ease; /* Add a transition effect */
+}
+
+/* Style for the submit button on hover */
+.btn:hover {
+  background-color: skyblue; /* Change the background color on hover */
+}
+.intro>h2{
+  color:white;
+  text-shadow: -1px 1px 0 #000,
+  1px 1px 0 #000,
+  1px -1px 0 #000,
+  -1px -1px 0 #000;
+}
+.intro>p{
+  color:skyblue;
+  text-shadow: -1px 1px 0 #000,
+  1px 1px 0 #000,
+  1px -1px 0 #000,
+  -1px -1px 0 #000;
+}

@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    color: #4c4c4c;
+    font-size: 1.3vmax;
+    font-family: 'Dosis', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#logo {
+    height: 30px;
+    filter: invert(1);
+}
+
+body {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.4);
+    flex-wrap: wrap;
+    /* position: static;
+    top: 0px; */
+    width: 100%;
+    z-index: 10;
+}
+
+#brand {
+    display: flex;
+    align-items: center;
+}
+
+#title {
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-left: 10px;
+
+}
+
+#title>p {
+    font-size: 1vmax;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+#title>h5 {
+
+    margin: 0px !important;
+    padding: 0px !important;
+}
+main {
+    padding: 20px 0;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.intro h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.user-input {
+    text-align: center;
+}
+
+.user-input h2 {
+    margin-bottom: 10px;
+}
+
+.user-input form {
+    display: inline-block;
+}
+
+.user-input input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px; /* Specify width for better control */
+}
+
+.user-input button {
+    background-color: #4CAF50; /* Green background for action buttons */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.user-input button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    color: #fff;
+    text-align: center;
+    POSITION:FIXED;
+    BOTTOM:0PX;
+    width:100%;
+}

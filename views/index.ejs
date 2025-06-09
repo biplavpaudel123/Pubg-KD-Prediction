@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;500;700&display=swap" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="topbar">
+        <div id="brand">
+            <img src="./images/play-e.svg" id="logo" alt="logo" />
+            <div id="title">
+                <h5>PLAY-E</h5>
+                <p> Connecting Gamers</p>
+            </div>
+        </div>
+        <ul id="nav">
+            <li><a href="http://localhost:3000/">Messages</a></li>
+            <li><a href="http://localhost:3012/">Statistics</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="container">
+            <section class="intro">
+                <h2>Welcome to Play-E Prediction System</h2>
+                <p>Explore your PUBG predictions!</p>
+            </section>
+        </div>
+        <div class="inputcontainer">
+            <section class="user-input">
+                <h2 id="enter">Enter Your User ID</h2>
+                <form action="/" method="post">
+                    <input type="text" id="username" name="name" placeholder="User ID">
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </section>
+        </div>
+        <div class="secondaryoutput output">
+
+            <h1 class="outputs">Pubg Ingame Name: <span id="player-name">
+                    <%=name %>
+                </span></h1>
+            <h1 class="outputs">Max killed Gamemode: <span id="game-mode">
+                    <%=mode%>
+                </span></h1>
+            <h1 class="outputs">Total Headshot Kills: <span id="headshot-kills">
+                    <%=kills%>
+                </span></h1>
+            <h1 class="outputs">Dailykills: <span id="daily-kills">
+                    <%=dailykills%>
+                </span></h1>
+            <h1 class="outputs">Dailywins: <span id="daily-wins">
+                    <%=dailywins%>
+                </span></h1>
+            <h1 class="outputs">Max Kill Streak: <span id="max-kill-streak">
+                    <%=maxkillstreak%>
+                </span></h1>
+            <h1 class="outputs">Top 10s: <span id="top-10s">
+                    <%=top10s%>
+                </span></h1>
+        </div>
+        <div class="mainoutput output" id="mainoutput">
+            <h1 class="outputs" id="predicted-kd">Predictedkd:<br><span>
+                    <%=Predictedkd%>
+                </span></h1>
+        </div>
+
+
+    </main>
+
+    <script>
+        const check=document.getElementById('predicted-kd').innerText
+       
+        const check1=check.substring(13);
+        if(check1=='Error getting stats'){
+            document.getElementsByClassName('output')[1].classList.add("show");
+            document.getElementsByClassName('output')[0].classList.add("show");
+            document.getElementsByClassName('inputcontainer')[0].classList.add("halfwidth");
+        }
+        if(Number(check1)>0){
+            document.getElementsByClassName('output')[1].classList.add("show");
+            document.getElementsByClassName('output')[0].classList.add("show");
+            document.getElementsByClassName('inputcontainer')[0].classList.add("halfwidth");
+            window.onload = function() {
+      document.getElementById('mainoutput').classList.add("spinner");
+         }}
+        const form = document.querySelector('form');
+
+        // Listen for the submit event
+        form.addEventListener('submit', function (event) {
+            // Select the input field
+            const input = document.getElementById('username');
+
+            // Check if the input field is empty
+            if (input.value === '') {
+                // Prevent the form from submitting
+                event.preventDefault();
+                alert('Please enter a User ID.');
+            }
+        });
+    </script>
+</body>
+
+</html>
